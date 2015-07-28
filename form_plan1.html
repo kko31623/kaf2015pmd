@@ -1,18 +1,20 @@
-<h1>Welcome to Plan My Day</h1>
-<p>Plan My Day® is a usefull web application which</p>
-<p>will take the way you are feeling (and your age)</p>
-<p> and plan a day for you in an instant. We look at </p>
-<p> convenient concerts, restraunts and other well </p>
-<p>known tourist attrations and plan a day just right for <em>you</em>.</p>
-Are you over 18? <input type="checkbox" name="chk" value="" unchecked>
-<p>How are you feeling?</p>
+<div class="main">
+  <h1 class="heading">Welcome to Plan My Day</h1>
+  <p>Plan My Day® is a usefull web application which will take the way you are feeling (and your age) and plan a day for you in an instant. We look at convenient concerts, restraunts and other well known tourist attrations and plan a day just <span>right for <em>you</em>.<span></p>
 <form action="" method="post">
-<select name='mood'>
-  <option value='option-1'>Bored</option>
-  <option value='option-2'>Enerjetic</option>
-  <option value='option-3'>Hungry</option>
-  <option value="option-4">Lazy</option>
-</select>
-<p></p>
-<input type="submit" name="submit" value="Plan my day">
-</form>
+    <p><label for="chk">Are you over 18?<label>
+    <input type="checkbox" name="chk" value="" unchecked>
+      </p>
+      <p><label for="mood">How are you feeling?</label>
+    <select name='mood'>
+      <option value='option-1'>Bored</option>
+      <option value='option-2'>Enerjetic</option>
+      <option value='option-3'>Hungry</option>
+      <option value="option-4">Lazy</option>
+    </select>
+      </p>
+    <input class="Day_Plan" type="submit" name="submit" value="Plan my day">
+  </form>
+</div>
+<div id="blue"></div>
+<div></div>
