@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	#map-canvas{
+		height:400px;
+		width: 400px;
+		margin: 0 auto;
+	}	
+	</style>
+</head>
+<body>
+<div id="map-canvas"></div>
+<h1>Hello!</h1>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+
+function initialize(position) {
+	console.log("I am initilizing");
+	console.log(position.coords.latitude+" foo "+position.coords.longitude);
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+}
+
+if (navigator.geolocation) {
+    console.log("Geolocation is supported by this browser.");
+    navigator.geolocation.getCurrentPosition(initialize);
+} else { 
+    console.log("Geolocation is not supported by this browser.");
+}
+
+
+
+</script>
+
+</body>
+</html>
+
+
