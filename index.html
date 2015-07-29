@@ -2,6 +2,7 @@
 <head>
 <link rel="stylesheet" href="stylesheet.css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patrick+Hand|Permanent+Marker|Rock+Salt" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 <div class="main">
@@ -13,16 +14,34 @@
       </p>
       <p><label for="mood">How are you feeling?</label>
     <select name='mood'>
-      <option value='option-1'>Bored</option>
-      <option value='option-2'>Enerjetic</option>
-      <option value='option-3'>Hungry</option>
-      <option value="option-4">Lazy</option>
+      <option value='bored'>Bored</option>
+      <option value='Enerjetic'>Enerjetic</option>
+      <option value='hungry'>Hungry</option>
+      <option value="lazy">Lazy</option>
+      <option value='thouhgtful'>Thoughtful</option>
+      <option value='lonely'>Lonely</option>
     </select>
+      </p>
+      <p><label for="Method of Travel">What is your prefered method of travel?</label>
+    <select name='Method of Travel'>
+      <option value='car'>Car</option>
+      <option value='Train'>Train</option>
+      <option value='Bus'>Bus</option>
+      <option value="walking">Walking</option>
+      <option value="bike">Biking</option>
+      </select>
+      </p>
+      <p><label for="Budget">How much money are you looking to spend? (£)</label>
+    <select name='Budget'>
+      <option value='10'> £10</option>
+      <option value='20'> £20</option>
+      <option value='30'> £30</option>
+      <option value="40"> £40</option>
+      <option value="50+"> £50+</option>
+      </select>
       </p>
     <input class="Day_Plan" type="submit" value="Plan My Day!" />
   </form>
 </div>
-<div id="blue"></div>
-<div></div>
 </body>
 </html>
