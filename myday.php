@@ -31,8 +31,8 @@ $travel = $_POST["Method_of_Travel"];
 $budget = $_POST["Budget"];
 $time = $_POST["Time"];
 $location = array(
-  "lat" => 50,
-  "lng" => 0
+  "lat" => $_POST["lat"],
+  "lng" => $_POST["lng"]
 );
 
 switch ($mood) {

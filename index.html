@@ -9,6 +9,8 @@
   <h1 class="heading">Welcome to Plan-A-Day</h1>
   <p>PlanIt is a useful web application which will take the way you are feeling (and your age) and plan a day for you in an instant. We look at convenient concerts, restaurants and other well known tourist attrations and plan a day just <span>right for <em>you</em>.<span></p>
 <form action="myday.php" method="post">
+  <input id="lat" type="hidden" name="lat" value="0">
+  <input id="lng" type="hidden" name="lng" value="0">
     <p><label for="chk">Are you over 18?<label>
     <input type="checkbox" name="chk" value="" unchecked>
       </p>
@@ -51,5 +53,14 @@
   </form>
     <p class="about"><a href="aboutus.html">About Us</a></p>
 </div>
+<script>
+   var initialize = function(LatLng){
+     var lat = document.getElementById("lat");
+     var lng = document.getElementById("lng");
+     lat.value = LatLng.coords.latitude;
+     lng.value = LatLng.coords.longitude;
+   }
+   navigator.geolocation.getCurrentPosition(initialize);
+</script>
 </body>
 </html>
