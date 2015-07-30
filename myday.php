@@ -38,7 +38,6 @@ switch ($mood) {
       	echo "You are " . $mood . ", But we don't support it yet sorry ;(";
 }
 ?>
-
 <html>
 <head>
 <link rel="stylesheet" href="myday.css">
@@ -53,14 +52,10 @@ switch ($mood) {
         <h3><?= $result["name"] ?></h3>
           <p class="result address">Address: <?= $result["address"]?></p>
           <p class="result type">Buisness Type: <?= $result["type"]?></p>
-          <p class="result rating">Rating: <?= $result["rating"]?> stars</p>
+          <p class="result rating">Rating: <?= $result["rating"] ?><?php if (is_numeric($result["rating"])): echo " stars"; endif ?></p>
         </li>
     <?php endforeach ?>
   </ol>
-
-
-
-
 </div> 
 </body>
 </html>
