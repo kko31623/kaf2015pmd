@@ -55,14 +55,17 @@
   </form>
     <p class="about"><a href="aboutus.html">About Us</a></p>
 </div>
-<script>
-   var initialize = function(LatLng){
-     var lat = document.getElementById("lat");
-     var lng = document.getElementById("lng");
-     lat.value = LatLng.coords.latitude;
-     lng.value = LatLng.coords.longitude;
-   }
-   navigator.geolocation.getCurrentPosition(initialize);
+<script type="text/javascript">
+    var initialize = function(LatLng){
+        var lat = document.getElementById("lat");
+        var lng = document.getElementById("lng");
+        lat.value = LatLng.coords.latitude;
+        lng.value = LatLng.coords.longitude;
+    }
+    var onError = function(err) {
+        console.log(err);
+    }
+    navigator.geolocation.getCurrentPosition(initialize, onError, { enableHighAccuracy: true, maximumAge: 0 });
 </script>
 </body>
 </html>
