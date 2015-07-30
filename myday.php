@@ -37,11 +37,34 @@ $location = array(
 
 switch ($mood) {
     case "hungry":
-        echo "You are hungry. :P";
         $results = getFoodRecs($location);
         break;
     default:
       	echo "You are " . $mood . ", But we don't support it yet sorry ;(";
 }
+?>
+
+<html>
+<head>
+<link rel="stylesheet" href="CSS/stylesheet.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patrick+Hand|Permanent+Marker|Rock+Salt" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="main">
+  <ol>
+    <?php foreach($results as $result): ?>
+      <li>
+        <h3><?= $result["name"] ?></h3>
+      </li>
+    <?php endforeach ?>
+  </ol>
+
+
+
+
+</div> 
+</body>
+</html>
 
 
