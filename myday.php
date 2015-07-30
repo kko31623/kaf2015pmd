@@ -46,7 +46,7 @@ switch ($mood) {
 
 <html>
 <head>
-<link rel="stylesheet" href="CSS/stylesheet.css">
+<link rel="stylesheet" href="myday.css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patrick+Hand|Permanent+Marker|Rock+Salt" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
@@ -54,9 +54,12 @@ switch ($mood) {
 <div class="main">
   <ol>
     <?php foreach($results as $result): ?>
-      <li>
+    <li>
         <h3><?= $result["name"] ?></h3>
-      </li>
+          <p class="result address">Address: <?= $result["address"]?></p>
+          <p class="result type">Buisness Type: <?= $result["type"]?></p>
+          <p class="result rating">Rating: <?= $result["rating"]?> stars</p>
+        </li>
     <?php endforeach ?>
   </ol>
 
