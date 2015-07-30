@@ -2,7 +2,7 @@
 function getFoodRecs($location){
   $ch = curl_init();
     
-  curl_setopt($ch, CURLOPT_URL, "http://api.ratings.food.gov.uk/Establishments?longitude=0&latitude=51.4&pageNumber=1&pageSize=10&maxDistanceLimit=1&sortOptionKey=Rating_desc");
+  curl_setopt($ch, CURLOPT_URL, "http://api.ratings.food.gov.uk/Establishments?longitude=". $location["lng"] ."&latitude=". $location["lat"] ."&pageNumber=1&pageSize=10&maxDistanceLimit=1&sortOptionKey=Rating_desc");
   curl_setopt($ch, CURLOPT_HTTPHEADER, array('x-api-version:2', 'accept: text/json'));
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   $json = curl_exec($ch);
