@@ -8,7 +8,6 @@ function getFoodRecs($location){
   $json = curl_exec($ch);
   curl_close($ch);      
   
-
   $data = json_decode($json);
     
   $listData = array();
@@ -23,9 +22,6 @@ function getFoodRecs($location){
   
   return $listData;
 }
-
-
-
 $mood = $_POST["mood"];
 $travel = $_POST["Method_of_Travel"];
 $budget = $_POST["Budget"];
@@ -34,7 +30,6 @@ $location = array(
   "lat" => $_POST["lat"],
   "lng" => $_POST["lng"]
 );
-
 switch ($mood) {
     case "hungry":
         $results = getFoodRecs($location);
@@ -69,5 +64,3 @@ switch ($mood) {
 </div> 
 </body>
 </html>
-
-
