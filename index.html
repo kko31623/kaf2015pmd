@@ -1,17 +1,14 @@
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="CSS/stylesheet.css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patrick+Hand|Permanent+Marker|Rock+Salt" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 <div class="main">
-  <h1 class="heading">Welcome to PlanIt</h1>
-  <div class="about"><a href="aboutus.html">About Us</a></div>
-  <img src="images/logo.png"/>
+  <h1 class="heading">Welcome to Plan-A-Day</h1>
   <p>PlanIt is a useful web application which will take the way you are feeling (and your age) and plan a day for you in an instant. We look at convenient concerts, restaurants and other well known tourist attrations and plan a day just <span>right for <em>you</em>.<span></p>
-<form action="" method="post">
+<form action="myday.php" method="post">
     <p><label for="chk">Are you over 18?<label>
     <input type="checkbox" name="chk" value="" unchecked>
       </p>
@@ -35,18 +32,24 @@
       </select>
       </p>
       <p><label for="Budget">How much money are you looking to spend? (£)</label>
-    <select name='Budget'>
-      <option value="0">£0</option>
+    <select name='Budget'>>
+
       <option value='10'> £10</option>
       <option value='20'> £20</option>
       <option value='30'> £30</option>
       <option value="40"> £40</option>
       <option value="50+"> £50+</option>
       </select>
+      <label for="Time">What time are you looking to go out?</label>
+      <select name="Time">
+        <option value="morning">Morning</option>
+        <option value="afternoon">Afternoon</option>
+        <option value="evening">Evening</option>      
+        </select>
       </p>
     <input class="Day_Plan" type="submit" value="Plan My Day!" />
   </form>
-<div class="about"><a href="aboutus.html">About Us</a></div>
+    <p class="about"><a href="aboutus.html">About Us</a></p>
 </div>
 </body>
 </html>
