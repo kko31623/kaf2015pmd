@@ -9,7 +9,7 @@ $location = array(
 );
 
 switch ($mood) {
-    case "Hungry":
+    case "hungry":
         echo "You are hungry. :P";
         break;
     default:
