@@ -41,7 +41,7 @@ switch ($mood) {
 
 <html>
 <head>
-<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="myday.css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patrick+Hand|Permanent+Marker|Rock+Salt" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
