@@ -10,7 +10,7 @@ body {
 
 .main {
   margin: 50px auto 0;
-  padding: 0 10px 400px 0px;
+  padding: 0 10px 100px 0px;
   width: 900px;
   background-color: white;
 }
@@ -45,7 +45,7 @@ border-radius: 10px;
 box-shadow: 0 0 4px rgba(0,0,0, .75);
 /*style the text*/
 color:#f3f3f3;
-font-size:1.5em;
+font-size:1.2em;
 }
 select{
 cursor:pointer; 
@@ -67,4 +67,8 @@ iframe{
 }
 div.img{
   width: 700px;
+}
+.result{
+  text-align: left;
+  font-size: 20px;
 }

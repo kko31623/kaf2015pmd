@@ -1,0 +1,43 @@
+<html>
+<head>
+<link rel="stylesheet" href="CSS/stylesheet.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patrick+Hand|Permanent+Marker|Rock+Salt" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="main">
+  <h1 class="heading">Welcome to Plan-My-Day</h1>
+  <p class="about"><a href="aboutus.html">About Us</a></p>
+  <img src="images/logo.png"/>
+  <p>Plan-My-Day is a useful web application which takes account of your location, mood and wants and instantly provides an array of options. It searches local venues and other well known attrations to provide a day tailored just <span>right for <em>you</em>.<span></p>
+<form action="myday.php" method="post">
+  <input id="lat" type="hidden" name="lat" value="0">
+  <input id="lng" type="hidden" name="lng" value="0">
+
+      <p><label for="mood">How are you feeling?</label>
+    <select name='mood'>
+      <option value='bored'>Bored</option>
+      <option value='Enerjetic'>Enerjetic</option>
+      <option value='hungry'>Hungry</option>
+      <option value="lazy">Lazy</option>
+      <option value='thouhgtful'>Thoughtful</option>
+      <option value='lonely'>Lonely</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <input class="Day_Plan" type="submit" value="Plan My Day!" />
+  </form>
+    <p class="about"><a href="aboutus.html">About Us</a></p>
+</div>
+<script>
+   var initialize = function(LatLng){
+     var lat = document.getElementById("lat");
+     var lng = document.getElementById("lng");
+     lat.value = LatLng.coords.latitude;
+     lng.value = LatLng.coords.longitude;
+   }
+   navigator.geolocation.getCurrentPosition(initialize);
+</script>
+</body>
+</html>
