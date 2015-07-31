@@ -55,7 +55,7 @@ switch ($mood) {
         <h3><?= $result["name"] ?></h3>
           <p class="result address">Address: <?= $result["address"]?></p>
           <p class="result type">Buisness Type: <?= $result["type"]?></p>
-          <p class="result rating">Rating: <?= $result["rating"]?> stars</p>
+          <p class="result rating">Hygine Rating: <?= $result["rating"]?> stars</p>
         </li>
     <?php endforeach ?>
   </ol>
