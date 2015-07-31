@@ -23,7 +23,7 @@ function getFoodRecs($location){
   return $listData;
 }
 $mood = $_POST["mood"];
-$travel = $_POST["Method_of_Travel"];
+$travel = $_POST["MethodOfTravel"];
 $budget = $_POST["Budget"];
 $time = $_POST["Time"];
 $location = array(
