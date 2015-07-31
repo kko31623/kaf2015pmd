@@ -2,7 +2,7 @@
 function getFoodRecs($location){
   $ch = curl_init();
     
-  curl_setopt($ch, CURLOPT_URL, "http://api.ratings.food.gov.uk/Establishments?longitude=". $location["lng"] ."&latitude=". $location["lat"] ."&pageNumber=1&pageSize=10&maxDistanceLimit=1&sortOptionKey=Rating_desc&BusinessTypeId=1");
+  curl_setopt($ch, CURLOPT_URL, "http://api.ratings.food.gov.uk/Establishments?longitude=". $location["lng"] ."&latitude=". $location["lat"] ."&pageNumber=1&pageSize=50&maxDistanceLimit=1&sortOptionKey=Rating_desc&BusinessTypeId=1");
   curl_setopt($ch, CURLOPT_HTTPHEADER, array('x-api-version:2', 'accept: text/json'));
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   $json = curl_exec($ch);
@@ -44,8 +44,10 @@ switch ($mood) {
 <link rel="stylesheet" href="CSS/stylesheet.css">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Patrick+Hand|Permanent+Marker|Rock+Salt" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Plan My Day -results</title>
 </head>
 <body>
+ <p><a href="/">Home</a></p>
 <div class="main">
   <ol>
     <?php foreach($results as $result): ?>
