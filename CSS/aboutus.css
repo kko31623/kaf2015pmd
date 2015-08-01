@@ -5,7 +5,7 @@ body{background-color:lightskyblue
   text-align:center;
   text-fonts:30px;
 }
-p li{
+p.text{
   font-size:30px;
 }
 
