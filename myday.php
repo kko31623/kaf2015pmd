@@ -1,4 +1,13 @@
 <?php
+function concatenateItemAddress($item) {
+  $address = $item->AddressLine1;
+  if (!empty($item->AddressLine2)) $address .= ', ' . $item->AddressLine2;
+  if (!empty($item->AddressLine3)) $address .= ', ' . $item->AddressLine3;
+  if (!empty($item->AddressLine4)) $address .= ', ' . $item->AddressLine4;
+
+  return $address;
+}
+
 function getFoodRecs($location){
   $ch = curl_init();
     
@@ -14,7 +23,7 @@ function getFoodRecs($location){
   foreach ($data->establishments as $item) {
     $listData[] = array(
       'name' => $item->BusinessName,
-      'address' => $item->AddressLine1,
+      'address' => concatenateItemAddress($item),
       'type' => $item->BusinessType,
       'rating' => $item->RatingValue,
     );
